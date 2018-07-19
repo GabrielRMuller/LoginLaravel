@@ -28,6 +28,14 @@ class UsuarioController extends Controller
     public function store()
     {
 
+        $this->validate(request(), [
+
+            'nome' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+            
+        ]);
+
         usuario::create(request(['nome', 'email', 'password']));
 
         return redirect('/');

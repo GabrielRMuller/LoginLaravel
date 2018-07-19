@@ -5,3 +5,22 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
+
+        /* body {
+            padding-top: 54px;
+        }
+
+        @media (min-width: 992px) {
+            body {
+                padding-top: 56px;
+            }
+        } */
+
+
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

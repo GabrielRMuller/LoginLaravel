@@ -1,8 +1,10 @@
-@include('partials.head')
+<div class="form-group">
+
+    @include('partials.head')
+    
     @include('partials.nav')
 
-<br>
-
+</div>
 
 <div class="container">
 
@@ -18,21 +20,21 @@
                 <div class="row">
                     <div class="container">
                         <div class="form-group">
-                            <input type="nome" name="nome" id="nome" class="form-control input-lg" placeholder="Nome" tabindex="1" required>
+                            <input type="nome" name="nome" id="nome" class="form-control input-lg" placeholder="Nome" tabindex="1">
                         </div>
                     </div>
                 </div>
 
                 {{-- Email --}}
                 <div class="form-group">
-                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="4" required>
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="4">
                 </div>
 
                 {{-- Senha --}}
                 <div class="row">
                     <div class="container">
                         <div class="form-group">
-                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Senha" tabindex="5" required>
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Senha" tabindex="5">
                         </div>
                     </div>
                 </div>
