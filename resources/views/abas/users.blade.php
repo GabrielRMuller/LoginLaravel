@@ -28,19 +28,19 @@
           <tbody>
 
 
-            {{-- @foreach($users as $user)
+            @foreach($usuarios as $usuario)
             <tr>
               <td>
-                {{$user->id}}
+                {{$usuario->id}}
               </td>
               <td>
-                {{$user->name}}
+                {{$usuario->nome}}
               </td>
               <td>
-                {{$user->email}}
+                {{$usuario->email}}
               </td>
             </tr>
-            @endforeach --}}
+            @endforeach
 
 
           </tbody>
