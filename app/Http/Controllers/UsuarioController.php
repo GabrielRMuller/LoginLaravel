@@ -49,7 +49,7 @@ class UsuarioController extends Controller
 
     public function destroy()
     {
-       // auth()->logout();
+        auth()->logout();
 
         return redirect('/');
     }
