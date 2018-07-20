@@ -21,10 +21,18 @@
                 </li>
                 <li class="nav-item">
                     @if(Auth::check())
-                    <a class="nav-link" href="#">{{ Auth::User()->nome }}</a>
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link" data-toggle="collapse" href="#collapseUser" aria-controls="collapseUser">{{ Auth::User()->nome }}</a>                    
                     @endif
                 </li>
+                @if(Auth::check())
+                <div class="collapse multi-collapse" id="collapseUser">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </div>
+                @else
+                <div class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </div>
+                @endif
             </ul>
         </div>
     </div>
