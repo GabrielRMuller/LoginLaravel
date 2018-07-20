@@ -23,6 +23,15 @@ class SistemaController extends Controller
     public function store()
     {
 
+
+        if(! auth()->attempt(request(['email', 'password']))){
+            
+            return back();
+
+        }
+        
+        return redirect('/');        
+        
         // $this->validate(request(), [
 
         //     'nome' => 'required',

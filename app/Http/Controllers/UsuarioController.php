@@ -39,7 +39,15 @@ class UsuarioController extends Controller
             
         ]);
 
-        $usuario = User::create(request(['nome','email', 'password']));
+        $usuario = new User;
+
+        $usuario->nome = request('nome');
+        $usuario->email = request('email');
+        $usuario->password = bcrypt(request('password'));
+        
+        $usuario->save();
+        
+        // $usuario = User::create(request(['nome','email', 'password']));
 
         auth()->login($usuario);
 
