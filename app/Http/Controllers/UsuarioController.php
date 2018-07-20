@@ -46,11 +46,4 @@ class UsuarioController extends Controller
         return redirect('/');
 
     }
-
-    public function destroy()
-    {
-        auth()->logout();
-
-        return redirect('/');
-    }
 }

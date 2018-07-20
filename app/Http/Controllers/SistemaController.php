@@ -12,4 +12,37 @@ class SistemaController extends Controller
         return view('welcome');
 
     }
+
+    public function create()
+    {
+
+        return view('abas.login');
+
+    }
+
+    public function store()
+    {
+
+        // $this->validate(request(), [
+
+        //     'nome' => 'required',
+        //     'email' => 'required|email',
+        //     'password' => 'required',
+
+        // ]);
+
+        // $usuario = User::create(request(['nome', 'email', 'password']));
+
+        // auth()->login($usuario);
+
+        // return redirect('/');
+
+    }
+
+    public function destroy()
+    {
+        auth()->logout();
+
+        return redirect('/');
+    }
 }

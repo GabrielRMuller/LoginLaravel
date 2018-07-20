@@ -8,4 +8,8 @@ Route::get('/register', 'UsuarioController@create');
 
 Route::post('/register', 'UsuarioController@store');
 
-Route::get('/logout', 'UsuarioController@destroy');
+Route::get('/logout', 'SistemaController@destroy');
+
+Route::get('/login', 'SistemaController@create');
+
+Route::post('/login', 'SistemaController@store');
