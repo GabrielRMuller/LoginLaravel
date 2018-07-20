@@ -19,6 +19,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/users">Listar Usuários</a>
                 </li>
+                <li class="nav-item">
+                    @if(Auth::check())
+                    <a class="nav-link" href="#">{{ Auth::User()->nome }}</a>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    @endif
+                </li>
             </ul>
         </div>
     </div>

@@ -4,21 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Usuario;
+use App\User;
 
 
 class UsuarioController extends Controller
 {
+
+  
+
     public function index()
     {
 
-        $usuarios = Usuario::all();
+        $usuarios = User::all();
 
         return view('abas.users', compact('usuarios'));
 
     }
 
-    public function showRegister()
+    public function create()
     {
 
         return view('abas.register');
@@ -31,14 +34,23 @@ class UsuarioController extends Controller
         $this->validate(request(), [
 
             'nome' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required'
             
         ]);
 
-        usuario::create(request(['nome', 'email', 'password']));
+        $usuario = User::create(request(['nome','email', 'password']));
+
+        auth()->login($usuario);
 
         return redirect('/');
 
+    }
+
+    public function destroy()
+    {
+       // auth()->logout();
+
+        return redirect('/');
     }
 }

@@ -1,7 +1,5 @@
 <div class="form-group">
-
     @include('partials.head')
-    
     @include('partials.nav')
 
 </div>
@@ -10,13 +8,9 @@
 
     <div class="container" align="center">
         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-            <form role="form" method="POST" action = '/register' align="center">
+            <form role="form" method="POST" action='/register' align="center">
                 <h2>Cadastre-se</h2>
-                <hr class="colorgraph">
-
-                {{ csrf_field() }}
-
-                {{-- Nome --}}
+                <hr class="colorgraph"> {{ csrf_field() }} {{-- Nome --}}
                 <div class="row">
                     <div class="container">
                         <div class="form-group">
@@ -39,14 +33,14 @@
                     </div>
                 </div>
 
-                <hr class="colorgraph">
-                
-                {{-- Botão Registrar --}}
+                <hr class="colorgraph"> {{-- Botão Registrar --}}
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
-                        <input type="submit" value="Cadastrar" class="btn btn-primary btn-block btn-lg"tabindex="7">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary btn-block btn-lg" tabindex="7">
                     </div>
                 </div>
+             {{-- @include('partials.errors') --}}
+
             </form>
         </div>
     </div>
