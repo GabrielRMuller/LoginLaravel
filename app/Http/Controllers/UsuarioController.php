@@ -10,7 +10,12 @@ use App\User;
 class UsuarioController extends Controller
 {
 
-  
+    public function idkaaaaa()
+    {
+
+        echo "aaaaaaaaaa";
+
+    }
 
     public function index()
     {
